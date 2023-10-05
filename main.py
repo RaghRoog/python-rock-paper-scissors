@@ -39,7 +39,11 @@ while(isLooped):
             elif playerSelection == cpuSelection:
                 print("Draw, nobody gets a point")
             print("Your points: " + str(playerPoints) + " CPU points: " + str(cpuPoints))
-            if playerPoints == 3 or cpuPoints == 3:
+            if playerPoints == 3:
                 gameLoop = False
+                print("You won " + str(playerPoints) + " to " + str(cpuPoints))
+            elif cpuPoints == 3:
+                gameLoop = False
+                print("You lost " + str(playerPoints) + " to " + str(cpuPoints))
     elif playerSelection == 3:
         isLooped = False
